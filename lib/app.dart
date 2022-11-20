@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:just_audio/just_audio.dart';
 import 'ui/MyHomePageBody.dart';
 import 'ui/MyHomePageFab.dart';
 import 'ui/Histgram.dart';
@@ -31,15 +32,31 @@ class CatanDicePage extends StatefulWidget {
 
 class _CatanDicePageState extends State<CatanDicePage> {
   CatanDice cdice = CatanDice();
+  final audioPlayer = AudioPlayer();
   List<int> _rolled = List.filled(2, 1);
   final FlutterTts tts = FlutterTts();
   List<String> _players = ["Bob", "John", "Alice"];
+
+  @override
+  void initState() {
+    super.initState();
+    this._loadAudioFile();
+  }
+
+  _loadAudioFile() {
+    audioPlayer.setAsset('assets/yon_dog.mp3');
+  }
 
   void _roll() {
     setState(() {
       this._rolled = this.cdice.roll();
       int result = this._rolled.reduce((int a, int b) => a + b);
-      this.tts.speak(result.toString());
+
+      if (result == 4) {
+        audioPlayer.play();
+      } else {
+        tts.speak(result.toString());
+      }
     });
   }
 
