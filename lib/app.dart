@@ -41,6 +41,10 @@ class _CatanDicePageState extends State<CatanDicePage> {
   void initState() {
     super.initState();
     this._loadAudioFile();
+
+    // 読み上げとヨン！のバランスを取る
+    audioPlayer.setVolume(1.0);
+    tts.setVolume(0.2);
   }
 
   _loadAudioFile() {
