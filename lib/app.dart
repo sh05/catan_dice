@@ -54,6 +54,7 @@ class _CatanDicePageState extends State<CatanDicePage> {
 
       if (result == 4) {
         audioPlayer.play();
+        this._loadAudioFile();
       } else {
         tts.speak(result.toString());
       }
