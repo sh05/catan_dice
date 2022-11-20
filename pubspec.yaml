@@ -37,6 +37,7 @@ dependencies:
 
   flutter_tts:
   fl_chart: 0.46.0
+  just_audio: ^0.9.30
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,8 +74,7 @@ flutter:
     - assets/dice_red_4.png
     - assets/dice_red_5.png
     - assets/dice_red_6.png
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+    - assets/yon_dog.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
