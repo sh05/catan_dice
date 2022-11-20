@@ -82,7 +82,10 @@ class _CatanDicePageState extends State<CatanDicePage> {
                   }
                 },
               ),
-              Text("次は" + "$nextPlayer" + "さんの番です"),
+              Text(
+                "次は" + "$nextPlayer" + "さんの番です",
+                style: Theme.of(context).textTheme.headline3,
+              ),
             ],
           ),
         ],
