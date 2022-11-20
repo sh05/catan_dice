@@ -25,7 +25,10 @@ class PlayersWidget extends StatelessWidget {
             }
           },
         ),
-        Text("次は" + "$nextPlayer" + "さんの番です"),
+        Text(
+          "次は" + "$nextPlayer" + "さんの番です",
+          style: Theme.of(context).textTheme.headline2,
+        ),
       ],
     );
   }
