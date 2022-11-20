@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class MyHomePageFab extends StatelessWidget {
   MyHomePageFab({Key? key, this.roll}) : super(key: key);
@@ -8,7 +9,18 @@ class MyHomePageFab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: roll,
-      child: const Icon(Icons.casino, size: 160),
+      child:
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+        Transform.rotate(
+          angle: 3 * pi / 2, //60度
+          child: const Icon(Icons.redo, size: 160),
+        ),
+        const Icon(Icons.casino, size: 160),
+        Transform.rotate(
+          angle: pi / 2, //60度
+          child: const Icon(Icons.redo, size: 160),
+        ),
+      ]),
     );
   }
 }
