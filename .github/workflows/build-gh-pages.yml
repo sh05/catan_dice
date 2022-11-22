@@ -12,12 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v2
-      - run: flutter build web
-      - run: mkdir docs
-      - run: cp -r ./web docs
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CATAN_DICE_53237 }}'
-          channelId: live
-          projectId: catan-dice-53237
+      - run: |
+         flutter pub get
+         flutter build web
+         mkdir docs
+         cp -r ./web docs
+         git config user.name github-actions
+         git config user.email github-actions@github.com
+         git add .
+         git commit -m "build"
+         git push
