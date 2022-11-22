@@ -27,8 +27,8 @@ class CatanDice {
   List<List<int>> history = [];
 
   List<int> roll() {
-    int diceA = math.Random().nextInt(5) + 1;
-    int diceB = math.Random().nextInt(5) + 1;
+    int diceA = math.Random().nextInt(6) + 1;
+    int diceB = math.Random().nextInt(6) + 1;
     List<int> result = [diceA, diceB];
     this.history.add(result);
     return [diceA, diceB];
