@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:just_audio/just_audio.dart';
-import 'ui/DiceBody.dart';
-import 'ui/DiceButton.dart';
-import 'ui/Histgram.dart';
-import 'script/CatanDice.dart';
+import 'ui/dice_body.dart';
+import 'ui/dice_button.dart';
+import 'ui/histgram.dart';
+import 'script/catandice.dart';
 
 class CatanDiceApp extends StatelessWidget {
   const CatanDiceApp({Key? key}) : super(key: key);
