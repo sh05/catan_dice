@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class MyHomePageFab extends StatelessWidget {
-  MyHomePageFab({Key? key, this.roll}) : super(key: key);
+class DiceButton extends StatelessWidget {
+  DiceButton({Key? key, this.roll}) : super(key: key);
   final VoidCallback? roll;
 
   @override

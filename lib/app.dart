@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:just_audio/just_audio.dart';
-import 'ui/MyHomePageBody.dart';
-import 'ui/MyHomePageFab.dart';
+import 'ui/DiceBody.dart';
+import 'ui/DiceButton.dart';
 import 'ui/Histgram.dart';
 import 'script/CatanDice.dart';
 
@@ -82,7 +82,7 @@ class _CatanDicePageState extends State<CatanDicePage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Column(children: <Widget>[
-            MyHomePageBody(rolled: this._rolled),
+            DiceBody(rolled: this._rolled),
           ]),
 
           // 参加者管理 state管理するのめんどくさいのでここに書く
@@ -116,7 +116,7 @@ class _CatanDicePageState extends State<CatanDicePage> {
         child: SizedBox(
           width: double.infinity,
           height: buttonHeight,
-          child: MyHomePageFab(roll: this._roll),
+          child: DiceButton(roll: this._roll),
         ),
       ),
     );

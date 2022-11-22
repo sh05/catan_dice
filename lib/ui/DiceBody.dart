@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyHomePageBody extends StatelessWidget {
-  MyHomePageBody({Key? key, required this.rolled}) : super(key: key);
+class DiceBody extends StatelessWidget {
+  DiceBody({Key? key, required this.rolled}) : super(key: key);
   List<int> rolled = List.filled(2, 1);
 
   final List<String> redDiceImagePaths = [
